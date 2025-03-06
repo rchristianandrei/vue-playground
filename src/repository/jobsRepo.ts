@@ -8,7 +8,7 @@ export default {
         title: "Senior Vue Developer",
         description:
           "We are seeking a talented Front-End Developer to join our team in Makatu, manila. The ideal candidate will have strong skills in HTML, CSS, and JavaScript...",
-        salary: "Php 100 - Php 120k",
+        salary: "Php 100k - Php 120k",
         location: "Makati, Manila",
       },
 
@@ -17,7 +17,7 @@ export default {
         title: "Software Engineer Intern",
         description:
           "We are seeking an aspiring Software Engineer to join our team in Calamba, Laguna. The ideal candidate will have strong desier to learn new things...",
-        salary: "Php 10 - Php 20k",
+        salary: "Php 10k - Php 20k",
         location: "Calamba, Laguna",
       },
 
@@ -26,7 +26,7 @@ export default {
         title: "Full-Stack Developer",
         description:
           "We are seeking a talented Full-Stack Developer to join our team in Ortigas, Pasig. The ideal candidate will have strong skills in Fron-end Development, and Back-end Development...",
-        salary: "Php 60 - Php 80k",
+        salary: "Php 60k - Php 80k",
         location: "Ortigas, Pasig",
       },
     ];
