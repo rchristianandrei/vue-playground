@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Job } from "../models/job";
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 import Card from "./Card.vue"
 import jobsRepo from "../repository/jobsRepo"
 
@@ -32,7 +33,7 @@ const jobs = ref<Job[]>(jobsRepo.getJobs())
             </Card>
         </div>
         <div v-if="showViewAllButton" class="flex justify-center align-center">
-            <a href="/joblistings" class="cursor-pointer bg-black text-white font-medium px-10 py-2 rounded hover:opacity-[0.5]">View All Jobs</a>
+            <RouterLink to="/joblistings" class="cursor-pointer bg-black text-white font-medium px-10 py-2 rounded hover:opacity-[0.5]">View All Jobs</RouterLink>
         </div>
     </div>
 </template>
