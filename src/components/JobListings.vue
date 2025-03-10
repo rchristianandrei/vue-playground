@@ -32,7 +32,7 @@ const jobs = ref<Job[]>(jobsRepo.getJobs())
             </Card>
         </div>
         <div v-if="showViewAllButton" class="flex justify-center align-center">
-            <a href="/jobs" class="cursor-pointer bg-black text-white font-medium px-10 py-2 rounded hover:opacity-[0.5]">View All Jobs</a>
+            <a href="/joblistings" class="cursor-pointer bg-black text-white font-medium px-10 py-2 rounded hover:opacity-[0.5]">View All Jobs</a>
         </div>
     </div>
 </template>
