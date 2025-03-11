@@ -4,6 +4,7 @@ import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import Card from "./Card.vue"
 import jobsRepo from "../repository/jobsRepo"
+import { ROUTES } from "../router";
 
 const props = defineProps({
     limit: {
@@ -33,7 +34,7 @@ const jobs = ref<Job[]>(jobsRepo.getJobs())
             </Card>
         </div>
         <div v-if="showViewAllButton" class="flex justify-center align-center">
-            <RouterLink to="/joblistings" class="cursor-pointer bg-black text-white font-medium px-10 py-2 rounded hover:opacity-[0.5]">View All Jobs</RouterLink>
+            <RouterLink :to="ROUTES.JOBS.BASE" class="cursor-pointer bg-black text-white font-medium px-10 py-2 rounded hover:opacity-[0.5]">View All Jobs</RouterLink>
         </div>
     </div>
 </template>

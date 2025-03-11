@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
+import { ROUTES } from '../router';
+
+function isActiveLink(routePath: string){
+    const route = useRoute()
+    return route.path === routePath
+}
 </script>
 
 <template>
@@ -10,9 +16,9 @@ import { RouterLink } from 'vue-router';
             </div>
             <nav>
                 <ul class="flex">
-                    <li class="text-xl flex justify-center cursor-pointer rounded hover:bg-green-900"><RouterLink to="/" class="px-5 py-2">Home</RouterLink></li>
-                    <li class="text-xl flex justify-center cursor-pointer rounded hover:bg-green-900"><RouterLink to="/joblistings" class="px-5 py-2">Jobs</RouterLink></li>
-                    <li class="text-xl flex justify-center cursor-pointer rounded hover:bg-green-900"><RouterLink to="/" class="px-5 py-2">Add Job</RouterLink></li>
+                    <li :class="[isActiveLink(ROUTES.HOME) ? 'bg-green-900' : '', 'text-xl', 'flex', 'justify-center', 'cursor-pointer', 'rounded', 'hover:bg-green-900']"><RouterLink :to="ROUTES.HOME" class="px-5 py-2">Home</RouterLink></li>
+                    <li :class="[isActiveLink(ROUTES.JOBS.BASE) ? 'bg-green-900' : '', 'text-xl', 'flex', 'justify-center', 'cursor-pointer', 'rounded', 'hover:bg-green-900']"><RouterLink :to="ROUTES.JOBS.BASE" class="px-5 py-2">Jobs</RouterLink></li>
+                    <li :class="[isActiveLink(ROUTES.JOBS.ADD) ? 'bg-green-900' : '', 'text-xl', 'flex', 'justify-center', 'cursor-pointer', 'rounded', 'hover:bg-green-900']"><RouterLink :to="ROUTES.JOBS.ADD" class="px-5 py-2">Add Job</RouterLink></li>
                 </ul>
             </nav>
         </div>

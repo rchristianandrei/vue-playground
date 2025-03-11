@@ -1,19 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import Home from "../views/Home.vue";
-import JobListings from "../views/JobListings.vue";
 import NotFound from "../views/NotFound.vue";
+
+import JobsRoute from "./jobsRoute";
+
+export const ROUTES = {
+  HOME: "/",
+  JOBS: JobsRoute.ROUTES,
+};
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
+      path: ROUTES.HOME,
       component: Home,
     },
-    {
-      path: "/joblistings",
-      component: JobListings,
-    },
+    JobsRoute.router,
     {
       path: "/:pathMatch(.*)*",
       component: NotFound,
